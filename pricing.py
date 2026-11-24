@@ -5,7 +5,10 @@ def calculate_total(price, quantity):
 
 
 if __name__ == "__main__":
-    price = float(input("Unit price: "))
-    quantity = int(input("Quantity: "))
-    total = calculate_total(price, quantity)
-    print(f"Total: {total:.2f}")
+    try:
+        price = float(input("Unit price: "))
+        quantity = int(input("Quantity: "))
+        total = calculate_total(price, quantity)
+        print(f"Total: {total:.2f}")
+    except ValueError as error:
+        print(f"Invalid input: {error}")
